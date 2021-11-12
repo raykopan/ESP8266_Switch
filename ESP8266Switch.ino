@@ -30,49 +30,49 @@ ESP8266WebServer server(80); // Server port
  void switch1On(){
     Serial.println("Switch 1 ON");
     server.send(200, "text/plain", "Switch 1 ON!");
-    digitalWrite(switch1, HIGH);
+    digitalWrite(switch1, LOW); // Active is LOW
              }
              
  void switch1Off() {
     Serial.println("Switch 1 OFF");
     server.send(200, "text/plain", "Switch 1 OFF!");
-    digitalWrite(switch1, LOW);
+    digitalWrite(switch1, HIGH);
              }
 
  void switch2On() {
     Serial.println("Switch 2 ON");
     server.send(200, "text/plain", "Switch 2 ON!");
-    digitalWrite(switch2, HIGH);
+    digitalWrite(switch2, LOW); // Active is LOW
              }
 
  void switch2Off() {
     Serial.println("Switch 2 OFF");
     server.send(200, "text/plain", "Switch 2 OFF!");
-    digitalWrite(switch2, LOW);
+    digitalWrite(switch2, HIGH);
              }  
 
 void switch3On() {
     Serial.println("Switch 3 ON");
     server.send(200, "text/plain", "Switch 3 ON!");
-    digitalWrite(switch3, HIGH);
+    digitalWrite(switch3, LOW); // Active is LOW
              }
 
  void switch3Off() {
     Serial.println("Switch 3 OFF");
     server.send(200, "text/plain", "Switch 3 OFF!");
-    digitalWrite(switch3, LOW);
+    digitalWrite(switch3, HIGH);
              } 
 
   void switch4On() {
     Serial.println("Switch 4 ON");
     server.send(200, "text/plain", "Switch 4 ON!");
-    digitalWrite(switch4, HIGH);
+    digitalWrite(switch4, LOW); // Active is LOW
              } 
 
    void switch4Off() {
     Serial.println("Switch 4 OFF");
     server.send(200, "text/plain", "Switch 4 OFF!");
-    digitalWrite(switch4, LOW);
+    digitalWrite(switch4, HIGH);
              } 
 
 void setup(void) {
@@ -82,11 +82,11 @@ void setup(void) {
   pinMode(switch2, OUTPUT);
   pinMode(switch3, OUTPUT);
   pinMode(switch4, OUTPUT);
-  // Set outputs to LOW
-  digitalWrite(switch1, LOW);
-  digitalWrite(switch2, LOW);
-  digitalWrite(switch3, LOW);
-  digitalWrite(switch4, LOW);
+  // Set outputs to HIGH
+  digitalWrite(switch1, HIGH); 
+  digitalWrite(switch2, HIGH);
+  digitalWrite(switch3, HIGH);
+  digitalWrite(switch4, HIGH);
       
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
