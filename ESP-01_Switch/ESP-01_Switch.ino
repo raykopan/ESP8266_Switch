@@ -5,8 +5,8 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 
-#define STASSID "Raykopan" // Replace with your wireless network ID
-#define STAPSK  "internet" // Replace with your password
+#define STASSID "NetworkID" // Replace with your wireless network ID
+#define STAPSK  "password" // Replace with your password
 
 //Outputs for control the switches
 const int switch1 = 0;   // GPIO0 ESP-01
@@ -28,25 +28,25 @@ ESP8266WebServer server(80); // Server port
  void switch1On(){
     Serial.println("Switch 1 ON");
     server.send(200, "text/plain", "Switch 1 ON!");
-    digitalWrite(switch1, HIGH);
+    digitalWrite(switch1, LOW); // Active LOW
              }
              
  void switch1Off() {
     Serial.println("Switch 1 OFF");
     server.send(200, "text/plain", "Switch 1 OFF!");
-    digitalWrite(switch1, LOW);
+    digitalWrite(switch1, HIGH);
              }
 
  void switch2On() {
     Serial.println("Switch 2 ON");
     server.send(200, "text/plain", "Switch 2 ON!");
-    digitalWrite(switch2, HIGH);
+    digitalWrite(switch2, LOW); // Active LOW
              }
 
  void switch2Off() {
     Serial.println("Switch 2 OFF");
     server.send(200, "text/plain", "Switch 2 OFF!");
-    digitalWrite(switch2, LOW);
+    digitalWrite(switch2, HIGH);
              }  
 
 void setup(void) {
@@ -56,8 +56,8 @@ void setup(void) {
   pinMode(switch2, OUTPUT);
    
   // Set outputs to LOW
-  digitalWrite(switch1, LOW);
-  digitalWrite(switch2, LOW);  
+  digitalWrite(switch1, HIGH);
+  digitalWrite(switch2, HIGH);  
       
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
