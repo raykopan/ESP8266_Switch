@@ -26,10 +26,10 @@ const int switch2 = 12;  // Pin D6 NodeMCU Active LOW
 const int switch3 = 13;  // Pin D7 NodeMCU Active LOW 
 const int switch4 = 15;  // Pin D8 NodeMCU Active LOW 
 
-const int button1 = 5;  // Pin D1 NodeMCU  Pull resistor not needed, button schould be connected between input pin and GND.  
-const int button2 = 4;  // Pin D2 NodeMCU  Pull resistor not needed, button schould be connected between input pin and GND.
-const int button3 = 0;  // Pin D3 NodeMCU  Pull resistor not needed, button schould be connected between input pin and GND. Flash button is connected here.
-const int button4 = 2;  // Pin D4 NodeMCU  Pull resistor not needed, button schould be connected between input pin and GND. Build in Led is connected here.
+const int button1 = 5;  // Pin D1 NodeMCU  Pull resistor not needed, button should be connected between input pin and GND.  
+const int button2 = 4;  // Pin D2 NodeMCU  Pull resistor not needed, button should be connected between input pin and GND.
+const int button3 = 0;  // Pin D3 NodeMCU  Pull resistor not needed, button should be connected between input pin and GND. Flash button is connected here.
+const int button4 = 2;  // Pin D4 NodeMCU  Pull resistor not needed, button should be connected between input pin and GND. Build in Led is connected here.
 
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "time.nist.gov", 0, 60000); 
