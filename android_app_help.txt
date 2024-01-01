@@ -1,4 +1,4 @@
-ESP8266Switch is for control up to 4 switches, using NodeMCU module and ESP8266_Switch.ino sketch.
+ESP8266Switch is for control up to four switches, using NodeMCU module and ESP8266_Switch.ino sketch.
 
 For use the module in local network only, url address in the application should be set to: http://ModuleIP/1/on 
 (for example: http://192.168.1.123/1/on).
